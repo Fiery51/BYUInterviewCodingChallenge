@@ -1,6 +1,7 @@
-from .memory import validate_answer
+from .memory import submit_answer
 
 def get_answer(answer):
-    if validate_answer(answer):
-        return {"result": "correct"}
-    return {"result": "incorrect"}
+    if answer is None:
+        return {"error": "Missing answer"}
+
+    return submit_answer(answer)
