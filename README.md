@@ -28,67 +28,38 @@ node --version
 npm --version
 ```
 
-## Setup and Run (Local Development)
+# Trivia App (React + Flask)
 
-Use two terminals: one for backend, one for frontend.
+This repo is set up as a full-stack app:
 
-### 1) Backend (Flask)
+- `frontend/`: React app (Vite)
+- `backend/`: Flask API
 
-From repo root:
+## Quick Start
+
+### 1) Backend
 
 ```powershell
-cd trivia\backend
+cd trivia/backend
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
 ```
 
-Backend starts at `http://localhost:5000`.
+Backend runs on `http://localhost:5000`.
 
-Health check:
-
-```powershell
-curl http://localhost:5000/api/health
-```
-
-### 2) Frontend (React + Vite)
-
-Open a second terminal from repo root:
+### 2) Frontend
 
 ```powershell
-cd trivia\frontend
+cd trivia/frontend
 npm install
 npm run dev
 ```
 
-Frontend starts at `http://localhost:5173`.
+Frontend runs on `http://localhost:5173`.
+To view the program use any browser and go to http://localhost:5173 to view the website and play the trivia game!
 
-The frontend dev server proxies `/api/*` requests to `http://localhost:5000`.
-
-## Everyday Commands
-
-Frontend (`trivia/frontend`):
-- `npm run dev` - Start dev server
-- `npm run build` - Create production build
-- `npm run preview` - Preview production build locally
-
-Backend (`trivia/backend`):
-- `python app.py` - Start Flask server
-
-## Environment Variables (Optional)
-
-Backend supports:
-- `PORT` (default: `5000`)
-- `FRONTEND_ORIGIN` (default: `http://localhost:5173`)
-
-Example (PowerShell):
-
-```powershell
-$env:PORT=5001
-$env:FRONTEND_ORIGIN="http://localhost:5173"
-python app.py
-```
 
 ## Troubleshooting
 
@@ -104,6 +75,21 @@ python app.py
 - Port already in use:
   - Stop the process using that port, or change backend `PORT`.
 
-## Notes
 
-There is also a module-level README at `trivia/README.md` with a quick-start version of these steps.
+## Assumptions / Notes
+- This game uses the Open Trivia DB to fetch 10 random questions at the start of a game and are stored in memory
+- Currently I just prioritize game flow over anything else, leaving polish out to ensure that the website and game works
+
+
+## Tools and Libraries Used
+- React + Vite for the frontend
+- Flask for the backend
+- Javascript and Python
+
+## Additions if I had more time
+- Allowing the user to pick catagories
+- Additional styling
+- User login and Database storage to allow data persistance
+- mobile styling
+- Backend tests to switch to test driven development
+- refactoring the backend to optimize code
