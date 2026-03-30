@@ -1,4 +1,6 @@
 # BYU Interview Coding Challenge
+This project is a full-stack trivia game built with React and Flask.  
+Users can start a game, answer a series of trivia questions fetched from the Open Trivia DB API, and receive a final score based on their performance.
 
 Full-stack trivia app with:
 - `trivia/frontend`: React + Vite
