@@ -28,5 +28,4 @@ npm run dev
 ```
 
 Frontend runs on `http://localhost:5173`.
-
-The Vite dev server proxies `/api/*` calls to Flask.
+To view the program use any browser and go to http://localhost:5173 to view the website and play the trivia game!
