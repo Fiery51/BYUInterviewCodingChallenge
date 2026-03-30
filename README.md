@@ -86,12 +86,12 @@ To view the program use any browser and go to http://localhost:5173 to view the 
 ## Tools and Libraries Used
 - React + Vite for the frontend
 - Flask for the backend
-- Javascript and Python
+- JavaScript and Python
 
 ## Additions if I had more time
-- Allowing the user to pick catagories
+- Allowing the user to pick categories
 - Additional styling
-- User login and Database storage to allow data persistance
+- User login and Database storage to allow data persistence
 - mobile styling
 - Backend tests to switch to test driven development
 - refactoring the backend to optimize code
