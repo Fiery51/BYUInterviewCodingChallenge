@@ -2,7 +2,8 @@ import random
 
 from flask import Blueprint, jsonify, request
 
-from trivia.backend.app import get_answer
+from .get_answer import get_answer
+
 from trivia.backend.app.get_questions import get_questions_easy, get_questions_medium, get_questions_hard
 
 api_bp = Blueprint("api", __name__)
@@ -31,7 +32,7 @@ def questions_hard():
 
 
 @api_bp.post("/answer")
-def answer(answer):
-    num = request.get_json().get("answer")
-    result = get_answer(answer)
+def answer():
+    user_answer = request.get_json().get("answer")
+    result = get_answer(user_answer)
     return jsonify(result)

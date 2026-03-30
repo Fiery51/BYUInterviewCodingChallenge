@@ -7,11 +7,8 @@ def store_answer(answer):
     answer_key = answer
 
 
-def validate_answer(answer):
-    if answer == answer_key:
-        return True
-    else:
-        return False
+def validate_answer(selected_option):
+    return selected_option == answer_key
 
 
 def update_score(num):
