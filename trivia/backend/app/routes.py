@@ -1,6 +1,6 @@
 import random
 
-from flask import Blueprint, jsonify
+from flask import Blueprint, app, jsonify
 
 api_bp = Blueprint("api", __name__)
 
@@ -17,7 +17,8 @@ def health():
     return jsonify({"status": "ok", "service": "trivia-backend"})
 
 
-@api_bp.get("/trivia/question")
-def random_question():
-    question = random.choice(TRIVIA_PROMPTS)
-    return jsonify({"question": question})
+#returns question, along with all possible answers
+@app.route("/api/questions/easy", methods=["GET"])
+def get_questions_easy():
+    result = get_questions_easy()
+    return jsonify(result)

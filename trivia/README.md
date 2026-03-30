@@ -14,7 +14,7 @@ cd trivia/backend
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
-python run.py
+python app.py
 ```
 
 Backend runs on `http://localhost:5000`.
